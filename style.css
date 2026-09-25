@@ -1,0 +1,1302 @@
+
+    /* =========================================
+       HELLOTHERE!
+       Soft Nature / Garden Theme
+       ========================================= */
+
+
+    /* =========================================
+       RESET
+       ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+
+    /* Soft green background like the reference */
+    background:
+            radial-gradient(
+                    circle at 50% 45%,
+                    #c2d6ad 0%,
+                    #c2d6ad 35%,
+                    #c2d6ad 65%,
+                    #d7fca0 100%
+            );
+
+    color: #526653;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NATURE BACKGROUND
+   ========================================= */
+
+.nature-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* Make website content stay above decorations */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 520px);
+    margin: auto;
+    padding: 30px 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   OLD BACKGROUND DECORATIONS
+   ========================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.star,
+.flower {
+    position: absolute;
+    opacity: 0.4;
+    animation: float 6s ease-in-out infinite;
+}
+
+.star1 {
+    top: 15%;
+    left: 10%;
+    font-size: 25px;
+}
+
+.star2 {
+    top: 25%;
+    right: 12%;
+    font-size: 18px;
+    animation-delay: 1s;
+}
+
+.star3 {
+    bottom: 20%;
+    left: 15%;
+    font-size: 20px;
+    animation-delay: 2s;
+}
+
+.flower1 {
+    top: 10%;
+    right: 20%;
+    font-size: 30px;
+    animation-delay: 1.5s;
+}
+
+.flower2 {
+    bottom: 10%;
+    right: 10%;
+    font-size: 35px;
+    animation-delay: 2.5s;
+}
+
+
+/* Floating effect */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+
+/* =========================================
+   BUTTERFLIES
+   ========================================= */
+
+.butterfly {
+    position: fixed;
+    left: -80px;
+
+    z-index: 5;
+    pointer-events: none;
+
+    opacity: 0.90;
+}
+
+
+/* Butterfly 1 */
+
+.butterfly1 {
+    top: 15%;
+    font-size: 40px;
+
+    animation:
+            butterfly1Move
+            10s
+            linear
+            infinite;
+}
+
+
+/* Butterfly 2 */
+
+.butterfly2 {
+    top: 50%;
+    font-size: 30px;
+
+    animation:
+            butterfly2Move
+            14s
+            linear
+            infinite;
+
+    animation-delay: 2s;
+}
+
+
+/* Butterfly 3 */
+
+.butterfly3 {
+    top: 75%;
+    font-size: 25px;
+
+    animation:
+            butterfly3Move
+            18s
+            linear
+            infinite;
+
+    animation-delay: 5s;
+}
+
+    /* Butterfly 4 */
+
+    .butterfly4 {
+        top: 95%;
+        font-size: 20px;
+
+        animation:
+                butterfly3Move
+                20s
+                linear
+                infinite;
+
+        animation-delay: 7s;
+    }
+
+    /* Butterfly 5 */
+
+    .butterfly5 {
+        top: 5%;
+        font-size: 37px;
+
+        animation:
+                butterfly3Move
+                25s
+                linear
+                infinite;
+
+        animation-delay: 2s;
+    }
+
+    /* Butterfly 6 */
+
+    .butterfly6 {
+        top: 60%;
+        font-size: 45px;
+
+        animation:
+                butterfly3Move
+                17s
+                linear
+                infinite;
+
+        animation-delay: 4s;
+    }
+
+
+/* Butterfly 1 movement */
+
+@keyframes butterfly1Move {
+
+    0% {
+        left: -80px;
+        transform: translateY(0) rotate(5deg);
+    }
+
+    25% {
+        transform: translateY(-50px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(30px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateY(-40px) rotate(-5deg);
+    }
+
+    100% {
+        left: 110%;
+        transform: translateY(0) rotate(5deg);
+    }
+}
+
+
+/* Butterfly 2 movement */
+
+@keyframes butterfly2Move {
+
+    0% {
+        left: -80px;
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    25% {
+        transform: translateY(40px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-60px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateY(20px) rotate(5deg);
+    }
+
+    100% {
+        left: 110%;
+        transform: translateY(-20px) rotate(-5deg);
+    }
+}
+
+
+/* Butterfly 3 movement */
+
+@keyframes butterfly3Move {
+
+    0% {
+        left: -80px;
+        transform: translateY(0) rotate(5deg);
+    }
+
+    20% {
+        transform: translateY(-30px) rotate(-5deg);
+    }
+
+    40% {
+        transform: translateY(50px) rotate(5deg);
+    }
+
+    60% {
+        transform: translateY(-40px) rotate(-5deg);
+    }
+
+    80% {
+        transform: translateY(30px) rotate(5deg);
+    }
+
+    100% {
+        left: 110%;
+        transform: translateY(0) rotate(5deg);
+    }
+}
+
+    /* Butterfly 4 movement */
+
+    @keyframes butterfly4Move {
+
+        0% {
+            left: -80px;
+            transform: translateY(0) rotate(5deg);
+        }
+
+        20% {
+            transform: translateY(-30px) rotate(-5deg);
+        }
+
+        40% {
+            transform: translateY(50px) rotate(5deg);
+        }
+
+        60% {
+            transform: translateY(-40px) rotate(-5deg);
+        }
+
+        80% {
+            transform: translateY(30px) rotate(5deg);
+        }
+
+        100% {
+            left: 110%;
+            transform: translateY(0) rotate(5deg);
+        }
+    }
+
+    /* Butterfly 5 movement */
+
+    @keyframes butterfly5Move {
+
+        0% {
+            left: -80px;
+            transform: translateY(0) rotate(5deg);
+        }
+
+        20% {
+            transform: translateY(-40px) rotate(-5deg);
+        }
+
+        40% {
+            transform: translateY(50px) rotate(5deg);
+        }
+
+        60% {
+            transform: translateY(-50px) rotate(-5deg);
+        }
+
+        80% {
+            transform: translateY(30px) rotate(10deg);
+        }
+
+        100% {
+            left: 110%;
+            transform: translateY(-30px) rotate(-10deg);
+        }
+    }
+
+    /* Butterfly 6 movement */
+
+    @keyframes butterfly6Move {
+
+        0% {
+            left: -80px;
+            transform: translateY(0) rotate(5deg);
+        }
+
+        20% {
+            transform: translateY(-30px) rotate(-5deg);
+        }
+
+        40% {
+            transform: translateY(100px) rotate(10deg);
+        }
+
+        60% {
+            transform: translateY(-80px) rotate(-10deg);
+        }
+
+        80% {
+            transform: translateY(60px) rotate(10deg);
+        }
+
+        100% {
+            left: 110%;
+            transform: translateY(0) rotate(10deg);
+        }
+    }
+
+
+
+    /* =========================================
+       FLOATING LEAVES
+       ========================================= */
+
+.leaf {
+    position: fixed;
+
+    z-index: 1;
+    pointer-events: none;
+
+    color: #718F60;
+    opacity: 0.5;
+    font-size: 28px;
+}
+
+
+/* Leaf positions */
+
+.leaf1 {
+    top: 10%;
+    left: 20%;
+    animation: leafFloat1 8s ease-in-out infinite;
+}
+
+.leaf2 {
+    top: 30%;
+    left: 75%;
+    font-size: 22px;
+    animation: leafFloat2 10s ease-in-out infinite;
+}
+
+.leaf3 {
+    top: 60%;
+    left: 10%;
+    font-size: 35px;
+    animation: leafFloat1 12s ease-in-out infinite;
+}
+
+.leaf4 {
+    top: 75%;
+    left: 80%;
+    font-size: 24px;
+    animation: leafFloat2 9s ease-in-out infinite;
+}
+
+.leaf5 {
+    top: 45%;
+    left: 90%;
+    font-size: 20px;
+    animation: leafFloat1 11s ease-in-out infinite;
+}
+
+.leaf6 {
+    top: 85%;
+    left: 35%;
+    font-size: 25px;
+    animation: leafFloat2 13s ease-in-out infinite;
+}
+
+
+/* Leaf movement 1 */
+
+@keyframes leafFloat1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(30px, -25px) rotate(20deg);
+    }
+}
+
+
+/* Leaf movement 2 */
+
+@keyframes leafFloat2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-25px, 20px) rotate(-25deg);
+    }
+}
+
+
+/* =========================================
+   WIND
+   ========================================= */
+
+    .wind {
+        position: fixed;
+        height: auto;
+
+        pointer-events: none;
+        z-index: 5;
+
+        opacity: 0.5;
+    }
+
+    /* Different sizes */
+    .wind1 {
+        width: 230px;
+        top: 18%;
+        left: -120px;
+        animation: windMove1 13s linear infinite;
+    }
+
+    .wind2 {
+        width: 280px;
+        top: 42%;
+        left: -180px;
+        animation: windMove2 17s linear infinite;
+        animation-delay: 4s;
+    }
+
+    .wind3 {
+        width: 300px;
+        top: 70%;
+        left: -140px;
+        animation: windMove3 15s linear infinite;
+        animation-delay: 8s;
+    }
+
+/* Wind movement */
+    @keyframes windMove1 {
+
+        0% {
+            transform: translate(-100px, 0) rotate(-3deg);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 0.5;
+        }
+
+        30% {
+            transform: translate(25vw, -25px) rotate(3deg);
+        }
+
+        50% {
+            transform: translate(50vw, 20px) rotate(-2deg);
+        }
+
+        70% {
+            transform: translate(70vw, -30px) rotate(4deg);
+        }
+
+        85% {
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(120vw, 15px) rotate(-3deg);
+            opacity: 0;
+        }
+    }
+
+
+    @keyframes windMove2 {
+
+        0% {
+            transform: translate(-150px, 20px) rotate(2deg);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 0.4;
+        }
+
+        30% {
+            transform: translate(30vw, 50px) rotate(-4deg);
+        }
+
+        50% {
+            transform: translate(55vw, -25px) rotate(3deg);
+        }
+
+        70% {
+            transform: translate(75vw, 35px) rotate(-3deg);
+        }
+
+        85% {
+            opacity: 0.4;
+        }
+
+        100% {
+            transform: translate(120vw, -15px) rotate(2deg);
+            opacity: 0;
+        }
+    }
+
+
+    @keyframes windMove3 {
+
+        0% {
+            transform: translate(-120px, -15px) rotate(-2deg);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 0.45;
+        }
+
+        35% {
+            transform: translate(35vw, -40px) rotate(4deg);
+        }
+
+        55% {
+            transform: translate(55vw, 25px) rotate(-3deg);
+        }
+
+        75% {
+            transform: translate(80vw, -20px) rotate(3deg);
+        }
+
+        85% {
+            opacity: 0.45;
+        }
+
+        100% {
+            transform: translate(120vw, 30px) rotate(-2deg);
+            opacity: 0;
+        }
+    }
+
+/* =========================================
+   SMALL PARTICLES
+   ========================================= */
+
+.petal {
+    position: fixed;
+
+    z-index: 1;
+    pointer-events: none;
+
+    color: #A5B98E;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+
+/* Particle positions */
+
+.petal1 {
+    top: 20%;
+    left: 50%;
+    animation: particleFloat 6s ease-in-out infinite;
+}
+
+.petal2 {
+    top: 70%;
+    left: 25%;
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.petal3 {
+    top: 35%;
+    left: 15%;
+    animation: particleFloat 7s ease-in-out infinite;
+}
+
+.petal4 {
+    top: 80%;
+    left: 65%;
+    animation: particleFloat 9s ease-in-out infinite;
+}
+
+
+/* Particle movement */
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+
+/* =========================================
+   MAIN CARD / SCREEN
+   ========================================= */
+
+.screen {
+    width: 100%;
+
+    /* Warm cream like the reference image */
+    background: rgba(248, 248, 233, 0.94);
+
+    padding: 40px 30px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    /* Soft outer shadow */
+    box-shadow:
+            0 20px 45px rgba(67, 88, 55, 0.18),
+            0 5px 15px rgba(67, 88, 55, 0.08);
+
+    /* Very subtle green border */
+    border: 1px solid rgba(142, 169, 117, 0.35);
+
+    display: none;
+
+    animation: appear 0.5s ease;
+}
+
+
+/* Active screen */
+
+.screen.active {
+    display: block;
+}
+
+
+/* Card entrance */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 15px;
+
+    animation:
+            gentleBounce
+            3s
+            ease-in-out
+            infinite;
+}
+
+
+/* Emoji movement */
+
+@keyframes gentleBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* Main heading */
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    color: #496A4B;
+
+    /* Gentle text shadow */
+    text-shadow:
+            0 2px 5px rgba(65, 91, 57, 0.12);
+}
+
+
+/* Secondary heading */
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+
+    color: #496A4B;
+
+    text-shadow:
+            0 2px 5px rgba(65, 91, 57, 0.1);
+}
+
+
+/* Paragraph */
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+
+    color: #61705E;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    font-size: 20px;
+    color: #587057;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 14px 22px;
+
+    margin: 7px;
+
+    /* Soft sage green */
+    background: #7DA272;
+
+    color: #FFFFFF;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.2s ease,
+            background 0.2s ease,
+            box-shadow 0.2s ease;
+
+    /* Soft button shadow */
+    box-shadow:
+            0 5px 12px rgba(69, 99, 62, 0.18);
+}
+
+
+/* Mouse over */
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: #8FBF8A;
+
+    color: #FFFFFF;
+
+    box-shadow:
+            0 8px 18px rgba(69, 99, 62, 0.24);
+}
+
+
+/* Button being pressed */
+
+button:active {
+    transform: scale(0.97);
+
+    background: #496A4B;
+
+    color: #FFFFFF;
+
+    box-shadow:
+            0 3px 7px rgba(69, 99, 62, 0.18);
+}
+
+
+/* Choice buttons */
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+/* Choice button width */
+
+.choices button {
+    width: 100%;
+    margin: 6px 0;
+}
+
+
+/* =========================================
+   RESPONSE TEXT
+   ========================================= */
+
+.small-response {
+    margin-top: 15px;
+
+    font-size: 15px;
+
+    min-height: 25px;
+
+    color: #587057;
+}
+
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
+.quote {
+    background: rgba(226, 235, 207, 0.75);
+
+    color: #587057;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin: 20px 0;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    box-shadow:
+            inset 0 1px 4px rgba(70, 90, 55, 0.05),
+            0 5px 15px rgba(70, 90, 55, 0.06);
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+   ========================================= */
+
+.music-button {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 10;
+
+    border-radius: 50px;
+
+    background: rgba(248, 248, 233, 0.95);
+
+    color: #587057;
+
+    box-shadow:
+            0 6px 20px rgba(60, 80, 50, 0.18);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* Music button hover */
+
+.music-button:hover {
+    background: #DDE8C9;
+    color: #496A4B;
+}
+
+
+/* =========================================
+   HIDDEN
+   ========================================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   PHONE / MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+        padding: 20px 0;
+    }
+
+
+    .screen {
+        padding: 32px 20px;
+        border-radius: 24px;
+
+        box-shadow:
+                0 15px 35px rgba(67, 88, 55, 0.18),
+                0 4px 12px rgba(67, 88, 55, 0.08);
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+
+    .emoji {
+        font-size: 55px;
+    }
+
+
+    p {
+        font-size: 15px;
+    }
+
+
+    .music-button {
+        bottom: 12px;
+        right: 12px;
+    }
+
+
+    /* Smaller butterflies on phones */
+
+    .butterfly1 {
+        font-size: 30px;
+    }
+
+    .butterfly2 {
+        font-size: 24px;
+    }
+
+    .butterfly3 {
+        font-size: 20px;
+    }
+
+
+    /* Smaller leaves */
+
+    .leaf {
+        font-size: 22px;
+    }
+
+
+    /* Softer wind */
+
+    .wind {
+        opacity: 0.4;
+    }
+}
+
+    .sticker {
+        position: fixed;
+
+        width: 70px;
+        height: 70px;
+
+        right: 25px;
+        bottom: 70px;
+
+        z-index: 10;
+        pointer-events: none;
+
+        object-fit: contain;
+
+        animation: stickerFloat 3s ease-in-out infinite;
+
+        filter:
+                drop-shadow(0 4px 8px rgba(60, 80, 50, 0.15));
+    }
+
+    @keyframes stickerFloat {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-7px);
+        }
+    }
+
+    .sticker-container {
+        position: fixed;
+        right: 25px;
+        bottom: 70px;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .cute-sticker {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+
+        pointer-events: none;
+
+        animation: stickerFloat 3s ease-in-out infinite;
+
+        filter: drop-shadow(
+                0 4px 8px rgba(60, 80, 50, 0.15)
+        );
+    }
+
+    .sticker-label {
+        background: #7DA272;
+        color: #FFFFFF;
+
+        padding: 5px 10px;
+        border-radius: 12px;
+
+        font-size: 12px;
+        font-weight: bold;
+
+        margin-bottom: 3px;
+
+        box-shadow: 0 3px 8px rgba(60, 80, 50, 0.15);
+
+        animation: labelBounce 2s ease-in-out infinite;
+    }
+
+    .sticker-container:hover .cute-sticker {
+        transform: scale(1.1);
+    }
+
+    .sticker-container:active .cute-sticker {
+        transform: scale(0.9);
+    }
+
+    @keyframes stickerFloat {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-7px);
+        }
+    }
+
+    @keyframes labelBounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-3px);
+        }
+    }
+
+    /* Hii! character */
+    .Hii-character {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        animation: helloBounce 2s ease-in-out infinite;
+    }
+
+    /* screen */
+    .screen-character {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        animation: helloBounce 2s ease-in-out infinite;
+    }
+
+
+
+
+    .hello-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .hello-title h1 {
+        margin: 0;
+    }
+
+    @keyframes helloBounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+    }
+
+    /* SMILE QUESTION  */
+
+    .smile-question {
+        margin: 20px 0; padding: 15px;
+        background: rgba(226, 235, 207, 0.65);
+        border-radius: 15px; text-align: left;
+    }
+
+    .smile-question label {
+        display: block; margin-bottom: 10px;
+        color: #587057; font-size: 15px;
+        font-weight: 600;
+    }
+
+    .smile-question input {
+        width: 100%; padding: 12px 14px;
+        border: 1px solid rgba(125, 162, 114, 0.4);
+        border-radius: 12px;
+        background: #ffffff;
+        color: #526653;
+        font-size: 14px;
+        font-family: inherit;
+        outline: none;
+        transition: 0.2s ease;
+    }
+
+    .smile-question input:focus {
+        border-color: #7DA272;
+        box-shadow: 0 0 0 3px rgba(125, 162, 114, 0.15);
+    }
+
+    .smile-question input::placeholder {
+        color: #9AAA94;
+    }
+
+    .response-gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .response-gif {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    #foodRain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .falling-food {
+        position: absolute;
+        width: 105px;
+        height: 105px;
+        object-fit: contain;
+        pointer-events: auto;
+        user-select: none;
+        cursor: pointer;
+        transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+

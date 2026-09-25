@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HelloThere! </title>
+    
+    <link rel="icon" type="image/gif" href="images/Cat Dancing Sticker.gif">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background">
+    <span class="star star1">✦</span>
+    <span class="star star2">✧</span>
+    <span class="star star3">✦</span>
+</div>
+
+<!-- MOVING NATURE BACKGROUND -->
+
+<div class="butterfly-layer">
+    <!-- Butterflies -->
+    <div class="butterfly butterfly1">🦋</div>
+    <div class="butterfly butterfly2">🦋</div>
+    <div class="butterfly butterfly3">🦋</div>
+    <div class="butterfly butterfly4">🦋</div>
+    <div class="butterfly butterfly5">🦋</div>
+    <div class="butterfly butterfly6">🦋</div>
+    <div class="butterfly butterfly7">🦋</div>
+    <div class="butterfly butterfly8">🦋</div>
+</div>
+
+<div>
+    <!-- Wind GIFs -->
+    <img src="images/leaves.gif" class="wind wind1" alt="">
+    <img src="images/leaves.gif" class="wind wind2" alt="">
+    <img src="images/leaves.gif" class="wind wind3" alt="">
+</div>
+
+<div class="nature-background">
+
+
+
+
+
+    <!-- Floating leaves -->
+    <div class="leaf leaf1">🍃</div>
+    <div class="leaf leaf2">🍃</div>
+    <div class="leaf leaf3">🍃</div>
+    <div class="leaf leaf4">🍃</div>
+    <div class="leaf leaf5">🍃</div>
+    <div class="leaf leaf6">🍃</div>
+    <div class="leaf leaf7">🍃</div>
+
+    <!-- Small floating petals -->
+    <div class="petal petal1">✿</div>
+    <div class="petal petal2">✦</div>
+    <div class="petal petal3">✧</div>
+    <div class="petal petal4">✿</div>
+
+</div>
+
+<main class="container">
+
+    <!-- INTRO -->
+    <section id="intro" class="screen active">
+
+        <div class="hello-title">
+        <h1>Hii!</h1>
+        <img
+                src="images/Hiii.png"
+                alt="Cute green character waving"
+                class="Hii-character"
+                onclick="playHiSound()"
+        >
+    </div>
+
+        <p>
+            No pressure. No complicated things.
+            <br>
+            Just a tiny moment to breathe. ☁️
+        </p>
+
+        <button onclick="showScreen('checkin')">
+            Hello!
+        </button>
+
+    </section>
+
+
+    <!-- CHECK-IN -->
+    <section id="checkin" class="screen">
+
+        <div class="hello-title">
+            <h1>
+                <img
+                    src="images/Checking In How Are You GIF.gif"
+                    alt="Checking In How Are You"
+                    class="screen-character"
+                    onclick="playHiSound()"
+                >
+            </h1>
+
+        </div>
+
+        <h2>OHH! Kamusta, OK ka lang?</h2>
+
+        <p>
+            How are you feeling today?
+            <br>
+            Just choose whatever feels closest. 🌱
+        </p>
+
+        <div class="choices">
+
+            <button onclick="feeling('great')">
+                😊 Mabuti naman ako!
+            </button>
+
+            <button onclick="feeling('okay')">
+                🙂 Okay lang naman.
+            </button>
+
+            <button onclick="feeling('tired')">
+                😮‍💨 Pagod lang ng kaunti.
+            </button>
+
+            <button onclick="feeling('hard')">
+                🥲 Ang daming nangyare,
+            </button>
+
+            <button onclick="feeling('unsure')">
+                🤷 Dko na alam.
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESPONSE -->
+    <section id="response" class="screen">
+
+        <div class="response-gif-container">
+            <img id="responseGif"
+                 class="response-gif"
+                 src=""
+                 alt="Cute response">
+        </div>
+
+        <h2 id="responseTitle"></h2>
+
+        <p id="responseText"></p>
+
+        <!-- Only appears when the user chooses "Mabuti naman ako!" -->
+        <div id="smileQuestion" class="smile-question hidden">
+            <label for="smileAnswer">
+                What made you smile today? 😊
+            </label>
+            <input type="text" id="smileAnswer" placeholder="Tell me... 🌸" >
+        </div>
+            <button onclick="showScreen('questions')">
+                Let's continue 🌱
+            </button>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+    <section id="questions" class="screen">
+
+        <div class="response-gif-container">
+            <img id="foodGif"
+                 class="response-gif"
+                 src="images/Fast Food Cat Sticker by Pusheen.gif"
+                 alt="Cute response">
+        </div>
+
+        <h2 id="foodTitle">KUMAIN kana ba?</h2>
+
+        <p id="foodMessage">
+            "Taking care of your body is the best way to care for yourself."
+        </p>
+
+        <div id="foodResponse" class="small-response"></div>
+
+        <div class="choices">
+            <button class="food-choice" onclick="answerFood('yes', this)">
+                😊  Yes!
+            </button>
+
+            <button class="food-choice" onclick="answerFood('no', this)">
+                😅 Not yet
+            </button>
+        </div>
+
+        <!-- Falling food goes here -->
+        <div id="foodRain"></div>
+
+        <button id="restButton" class="hidden" onclick="showRestQuestion()">
+            Busog na ako.
+        </button>
+
+    </section>
+
+
+    <!-- REST -->
+    <section id="rest" class="screen">
+
+        <div class="emoji">🌙</div>
+
+        <h2>One more thing...</h2>
+
+        <p>
+            Did you get enough rest?
+        </p>
+
+        <div class="choices">
+            <button class="rest-choice" onclick="restAnswer('yes', this)">
+                😴 Yes, I rested!
+            </button>
+
+            <button class="rest-choice" onclick="restAnswer('little', this)">
+                🌿 A little.
+            </button>
+
+            <button class="rest-choice" onclick="restAnswer('no', this)">
+                😅 Not yet.
+            </button>
+        </div>
+
+        <p id="restResponse"></p>
+
+    </section>
+
+
+    <!-- CHOOSE -->
+    <section id="choose" class="screen">
+
+        <div class="emoji">🌸</div>
+
+        <h2>What do you need right now?</h2>
+
+        <p>
+            Pick whatever sounds nice.
+        </p>
+
+        <div class="choices">
+
+            <button onclick="chooseNeed('encouragement')">
+                🌸 A little encouragement
+            </button>
+
+            <button onclick="chooseNeed('music')">
+                🎵 Some music
+            </button>
+
+            <button onclick="chooseNeed('break')">
+                ☕ A moment to breathe
+            </button>
+
+            <button onclick="chooseNeed('surprise')">
+                💌 A little surprise
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section id="final" class="screen">
+
+        <div id="finalEmoji" class="emoji">🌷</div>
+
+        <h2 id="finalTitle">You made it here. 🌷</h2>
+
+        <p id="finalText">
+            Whatever kind of day you're having,
+            I'm glad you stopped by.
+        </p>
+
+        <div class="quote">
+            "You don't have to figure everything out today.
+            One little step is enough."
+        </div>
+
+        <button onclick="restart()">
+            ↻ Start again
+        </button>
+
+    </section>
+
+</main>
+
+<!-- CUTE STICKER -->
+<div class="sticker-container" onclick="playCatSound()">
+    <div class="sticker-label">Tap me! 🐾</div>
+
+    <img
+            src="images/Cat Dancing Sticker.gif"
+            alt="Cute cat sticker"
+            class="cute-sticker"
+    >
+</div>
+
+<!-- CAT SOUND -->
+<audio id="catSound" src="sfx/scuba_Cat.mp3"></audio>
+<!-- Hmmp sound-->
+<audio id="HiiSound" src="sfx/Hmm.ogg"></audio>
+<!-- EATING SOUND -->
+<audio id="eatSound" src="sfx/eating chip.mp3" preload="auto"></audio>
+
+<!-- MUSIC BUTTON -->
+<button id="musicButton" class="music-button" onclick="toggleMusic()">
+    🎵 Muted
+</button>
+<!-- Background Music-->
+<audio id="backgroundMusic" loop>
+    <source src="sfx/BGmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
